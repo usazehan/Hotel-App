@@ -1,0 +1,90 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$hotel-primary: (
+    50 : #f6fbfb,
+    100 : #e8f5f4,
+    200 : #d9efed,
+    300 : #c9e9e6,
+    400 : #bee4e0,
+    500 : #b2dfdb,
+    600 : #abdbd7,
+    700 : #a2d7d2,
+    800 : #99d2cd,
+    900 : #8acac4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #f6fffe,
+    A700 : #dcfffc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$hotel-accent: (
+    50 : #fffefb,
+    100 : #fffdf6,
+    200 : #fffcf0,
+    300 : #fffaea,
+    400 : #fff9e6,
+    500 : #fff8e1,
+    600 : #fff7dd,
+    700 : #fff6d9,
+    800 : #fff5d5,
+    900 : #fff3cd,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$Hotel-App-primary: mat-palette($hotel-primary, 700, 300, 900);
+$Hotel-App-accent:  mat-palette($hotel-accent, 500, 400, 700);
+$Hotel-App-warn:    mat-palette($mat-red);
+$Hotel-App: mat-light-theme($Hotel-App-primary, $Hotel-App-accent, $Hotel-App-warn);
+
+@import '/app/navigation/navtabs/navtabs.component-theme.scss';
+
+@include angular-material-theme($Hotel-App);
+
+// Navtabs component scss file
+@include navtabs-component-theme($Hotel-App);
+
+// All of the styles will go here
+.mat-list-option:hover,
+.mat-list-option.mat-list-item-focus,
+.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-list-item.mat-list-item-focus {
+    background-color: mat-color($Hotel-App-primary, 300);
+    color: mat-color($Hotel-App-primary, 900); 
+}
