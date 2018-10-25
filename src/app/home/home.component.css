@@ -1,7 +1,7 @@
-.container {
-    height: 100vh;
-    background: url(/assets/images/home_beach.jpg) no-repeat;
-    background-size: 100% auto; 
+.hero-container {
+    background: url(/assets/images/home_beach.jpg)center center no-repeat;
+    background-size: cover;
+    height: calc(100vh - 145)
 }
 .bookNowContainer {
     padding: 35px 115px;
@@ -14,5 +14,7 @@
     border-radius: 5px;
 }
 .header-container {
-    height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 600px;
 }
