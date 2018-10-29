@@ -38,6 +38,7 @@
     -webkit-text-fill-color: transparent;
     background: url(/assets/images/thailand_text_background.jpg)repeat;
     -webkit-background-clip: text;
+    background-clip: text;
     font-stretch: normal;
     font-size: 200px;
     letter-spacing: 0.09em;
