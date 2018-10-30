@@ -50,9 +50,25 @@
     position: relative;
 }
 
+.home-section {
+
+}
+
 .home-section p{
     text-align: center;
     line-height: normal;
+}
+
+.rooms-home-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.rooms-home-display .mat-card {
+    position: relative;
+    text-align: center;
 }
 
 /* @media all and (min-width: 768px) {
